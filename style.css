@@ -1,0 +1,250 @@
+html {
+    font-size: 5px;
+}
+
+body {
+    background-color: #000000;
+    position: relative;
+}
+
+* {
+    color: rgb(233, 233, 233);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(/nhan-nguyen-nNm1c2lF1Es-unsplash.jpg);
+    background-size: 400%;
+    background-repeat: no-repeat;
+    padding-right: 0;
+    overflow: hidden;
+
+}
+
+.circle {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(27, 27, 27);
+
+}
+
+.circle .planet {
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(0deg);
+    animation: cyclePlanet 10s linear infinite;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+.circle:first-child {
+    width: 15rem;
+    height: 15rem;
+    background-image: radial-gradient(#ff7300, orange 40%, yellow);
+    box-shadow: 0 0 2rem orange;
+    border: none;
+}
+
+.circle:nth-child(2) {
+    padding: 6.5rem;
+    animation: cycle 6s linear infinite;
+
+}
+
+.circle:nth-child(2) .planet {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(179, 179, 179);
+    left: -8rem;
+    position: relative;
+}
+
+
+
+
+
+
+.circle:nth-child(3) {
+    padding: 12.5rem;
+    animation: cycle 8s linear infinite;
+}
+
+.circle:nth-child(3) .planet {
+    width: 4.5rem;
+    height: 4.5rem;
+    background: linear-gradient(to right, #f1c40f, #e67e22, #d35400);
+    left: -14.5rem;
+}
+
+
+
+
+
+
+.circle:nth-child(4) {
+    padding: 21rem;
+    animation: cycle 10s linear infinite;
+}
+
+.circle:nth-child(4) .planet {
+    width: 6rem;
+    height: 6rem;
+    background: radial-gradient(springgreen, rgb(0, 114, 221) 73%);
+    left: -24rem;
+}
+
+.circle:nth-child(4) .planet .moon {
+    background-color: #c7c7c7;
+    /* background-image: linear-gradient(#c7c7c7, white, #c7c7c7); */
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: -2.5rem;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+.circle:nth-child(5) {
+    padding: 30rem;
+    animation: cycle 12s linear infinite;
+}
+
+.circle:nth-child(5) .planet {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #ff5e00;
+    left: -32rem;
+}
+
+
+
+
+
+
+.circle:nth-child(6) {
+    padding: 40rem;
+    animation: cycle 14s linear infinite;
+}
+
+.circle:nth-child(6) .planet {
+    width: 12rem;
+    height: 12rem;
+    background-image: linear-gradient(#ece19e, #b39050, #ece19e 50%, #b39050, #ece19e, #b39050);
+    left: -45.5rem;
+    position: relative;
+}
+
+.circle:nth-child(6) .planet::before {
+    content: "";
+    position: absolute;
+    width: 0.8rem;
+    height: 0.4rem;
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    border: 1rem solid rgb(255, 181, 43);
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+
+
+
+
+
+.circle:nth-child(7) {
+    padding: 55rem;
+    animation: cycle 16s linear infinite;
+}
+
+.circle:nth-child(7) .planet {
+    width: 11rem;
+    height: 11rem;
+    background-image: linear-gradient(#ff9c3f, #ffde72, #ff9c3f, #ffde72, #ff9c3f);
+    left: -60rem;
+    position: relative;
+}
+
+.circle:nth-child(7) .planet::before {
+    content: "";
+    position: absolute;
+    width: 13.5rem;
+    height: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffde72;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+.circle:nth-child(8) {
+    padding: 68rem;
+    animation: cycle 18s linear infinite;
+}
+
+.circle:nth-child(8) .planet {
+    width: 6rem;
+    height: 6rem;
+    background-image: linear-gradient(#0276a3, #35bfff, #0276a3, #35bfff, #0276a3, #35bfff, #0276a3);
+    left: -71rem;
+}
+
+
+
+.circle:nth-child(9) {
+    padding: 81rem;
+    animation: cycle 20s linear infinite;
+}
+
+.circle:nth-child(9) .planet {
+    width: 7rem;
+    height: 7rem;
+    background-image: linear-gradient(#0276a3, #002a9c, #0276a3, #002a9c, #0276a3, #002a9c);
+    left: -84.5rem;
+}
+
+
+@keyframes cycle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes cyclePlanet {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
